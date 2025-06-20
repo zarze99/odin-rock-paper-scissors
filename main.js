@@ -14,5 +14,52 @@ function getHumanChoice(){
     return str
 }
 
+function playRound(humanChoice, computerChoice){
+    humanChoice = toLowerCase(humanChoice)
+
+    if(humanChoice == computerChoice){
+        console.log(`Draw! ${computerChoice} equals ${humanChoice}`)
+        return
+    }    
+
+    const winDialog = `You win! ${humanChoice} beats ${computerChoice}`
+    const loseDialog = `You Lose! ${computerChoice} beats ${humanChoice}`
+
+    if(humanChoice == "rock"){
+        if(computerChoice == "paper"){
+        console.log(loseDialog)
+        computerScore++
+        }
+        else {
+            console.log(winDialog)
+            humanScore++
+        }
+    }
+
+    if(humanChoice == "paper"){
+        if(computerChoice == "scissors"){
+        console.log(loseDialog)
+        computerScore++
+        }
+        else {
+            console.log(winDialog)
+            humanScore++
+        }
+    }
+
+    if(humanChoice == "scissors"){
+        if(computerChoice == "rock"){
+        console.log(loseDialog)
+        computerScore++
+        }
+        else {
+            console.log(winDialog)
+            humanScore++
+        }
+    }
+
+}
+
 let humanScore = 0
 let computerScore = 0
+
