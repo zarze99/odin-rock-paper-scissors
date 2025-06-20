@@ -87,3 +87,5 @@ function playGame(){
 
 
 }
+
+playGame()
