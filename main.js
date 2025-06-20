@@ -1,5 +1,6 @@
 function getComputerChoice(){
-    let i = Math.random()
+    let i = 2*Math.random() - 1
+    console.log(i)
     if(i < 0){
         return "rock"
     }
@@ -20,7 +21,7 @@ function playGame(){
     let computerScore = 0
 
     function playRound(humanChoice, computerChoice){
-        humanChoice = toLowerCase(humanChoice)
+        humanChoice = humanChoice.toLowerCase(humanChoice)
     
         if(humanChoice == computerChoice){
             console.log(`Draw! ${computerChoice} equals ${humanChoice}`)
@@ -70,6 +71,8 @@ function playGame(){
         const humanChoice = getHumanChoice()
         playRound(humanChoice, computerChoice)
     }
+
+    console.log(`Final Score was ${humanScore} to ${computerScore}`)
 
     if(humanScore == computerScore){
         console.log("You Tied!")
