@@ -1,10 +1,9 @@
 function getComputerChoice(){
-    let i = 2*Math.random() - 1
-    console.log(i)
-    if(i < 0){
+    let i = 3*Math.random()
+    if(i <= 1){
         return "rock"
     }
-    if(i > 0){
+    if(i <= 2){
         return "paper"
     }
     return "scissors"
